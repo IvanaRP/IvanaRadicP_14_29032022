@@ -1,0 +1,20 @@
+table {
+  white-space: nowrap;
+  width: 80%;
+}
+
+.employee-table {
+  display: flex;
+  width: fit-content;
+}
+tr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+th {
+  padding: 10px;
+}
+td {
+  padding: 10px;
+}

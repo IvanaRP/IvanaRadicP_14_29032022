@@ -1,0 +1,13 @@
+.employeesWrapper {
+  margin: auto;
+  width: 50%;
+
+  padding: 10px;
+}
+
+.employeesContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

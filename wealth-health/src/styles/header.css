@@ -1,0 +1,17 @@
+.headContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+}
+
+.headContainer-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.head-logo {
+  width: 40%;
+}
