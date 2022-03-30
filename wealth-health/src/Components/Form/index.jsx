@@ -1,4 +1,5 @@
 import "../../styles/home.css";
+import DatePickerForm from "../../Components/DatePicker";
 
 function Form() {
   return (
@@ -10,10 +11,10 @@ function Form() {
       <input type="text" id="last-name" />
 
       <label for="date-of-birth">Date of Birth</label>
-      <input id="date-of-birth" type="text" />
+      <DatePickerForm />
 
       <label for="start-date">Start Date</label>
-      <input id="start-date" type="text" />
+      <DatePickerForm />
 
       <fieldset className="home-form-address">
         <legend>Address</legend>
