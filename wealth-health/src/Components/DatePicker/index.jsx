@@ -11,6 +11,7 @@ const DatePickerForm = () => {
   const [startDate, setStartDate] = useState(new Date());
   return (
     <DatePicker
+      dateFormat="dd/MM/yyyy"
       locale="es"
       selected={startDate}
       onChange={(date) => setStartDate(date)}

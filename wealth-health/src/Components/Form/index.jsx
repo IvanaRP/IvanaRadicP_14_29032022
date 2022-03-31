@@ -1,5 +1,6 @@
 import "../../styles/home.css";
 import DatePickerForm from "../../Components/DatePicker";
+import DropDown from "../../Components/Dropdown";
 
 function Form() {
   return (
@@ -27,7 +28,7 @@ function Form() {
 
         <label for="state">State</label>
         <select name="state" id="state"></select>
-
+        <DropDown />
         <label for="zip-code">Zip Code</label>
         <input id="zip-code" type="number" />
       </fieldset>
