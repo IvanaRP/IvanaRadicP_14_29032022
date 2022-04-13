@@ -3,7 +3,7 @@ import React from "react";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import { departments, states } from "../../Datas/data";
-// import Dropdown from "react-dropdown";
+
 import "react-dropdown/style.css";
 import DatePicker from "react-date-picker";
 import Select from "react-select";
@@ -11,14 +11,13 @@ import Select from "react-select";
 const initialFieldValues = {
   id: 0,
   fullName: "",
-  email: "",
-  mobile: "",
+  lastName: "",
+  startDate: "",
+  department: "",
+  birthDate: "",
+  street: "",
   city: "",
-  gender: "male",
-  departmentId: "",
-  stateId: "",
-  hireDate: new Date(),
-  isPermanent: false,
+  zipCode: "",
 };
 export default function EmployeesForm() {
   const [open, setOpen] = useState(false);
@@ -52,7 +51,7 @@ export default function EmployeesForm() {
     <>
       <div>EmployeesForm</div>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} autoComplete="off">
         <label>
           Full Name:
           <input
@@ -66,30 +65,81 @@ export default function EmployeesForm() {
           />
         </label>
         <label>
-          Email:
+          Last Name:
           <input
             type="text"
-            label="Email"
-            name="email"
-            value={values.email}
+            label="lastName"
+            name="lastName"
+            value={values.lastName}
             onChange={handleInputChange}
             autoComplete="off"
-            id="email"
+            id="lastName"
           />
         </label>
-
+        <div className="input">
+          <label className="input-label" type="text" htmlFor="state">
+            Start Date:
+          </label>
+          <DatePicker
+            name="startDate"
+            label="Date"
+            format="MM/dd/yyyy"
+            onChange={handleInputChange}
+            value={values.startDate}
+          />
+        </div>
         <div className="input">
           <label className="input-label" type="text" htmlFor="state">
             Department:
           </label>
           <Select
-            name="departmentId"
+            name="department"
             label="Department"
             placeholder="Select an option"
-            value={values.departmentId}
+            value={values.department}
             onChange={handleInputChange}
             options={departments}
           />
+        </div>
+        <div className="input">
+          <label className="input-label" type="text" htmlFor="state">
+            Birth Date:
+          </label>
+          <DatePicker
+            name="birthDate"
+            label="Date"
+            format="MM/dd/yyyy"
+            onChange={handleInputChange}
+            value={values.birthDate}
+          />
+        </div>
+        <div className="input">
+          <label>
+            Street:
+            <input
+              type="text"
+              label="street"
+              name="street"
+              value={values.street}
+              onChange={handleInputChange}
+              autoComplete="off"
+              id="street"
+            />
+          </label>
+        </div>
+        <div className="input">
+          <label>
+            City:
+            <input
+              type="text"
+              label="city"
+              name="city"
+              value={values.city}
+              onChange={handleInputChange}
+              autoComplete="off"
+              id="city"
+            />
+          </label>
         </div>
         <div className="input">
           <label className="input-label" type="text" htmlFor="state">
@@ -104,15 +154,19 @@ export default function EmployeesForm() {
             onChange={handleInputChange}
           />
         </div>
-
-        <div>
-          <DatePicker
-            name="hireDate"
-            label="Date"
-            format="MM/dd/yyyy"
-            onChange={handleInputChange}
-            value={values.hireDate}
-          />
+        <div className="input">
+          <label>
+            Zip Code:
+            <input
+              type="text"
+              label="zipCode"
+              name="zipCode"
+              value={values.zipCode}
+              onChange={handleInputChange}
+              autoComplete="off"
+              id="zipCode"
+            />
+          </label>
         </div>
 
         <div>

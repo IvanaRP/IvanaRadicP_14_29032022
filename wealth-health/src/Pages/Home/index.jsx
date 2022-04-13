@@ -1,18 +1,12 @@
 import { Link } from "react-router-dom";
-import React, { useState } from "react";
+import React from "react";
 
 import "react-responsive-modal/styles.css";
-import { Modal } from "react-responsive-modal";
-// import Form from "../../Components/Form";
+
 import "../../styles/home.css";
 import EmployeesForm from "../../Components/Form";
 
 function Home() {
-  const [open, setOpen] = useState(false);
-
-  const onOpenModal = () => setOpen(true);
-  const onCloseModal = () => setOpen(false);
-
   return (
     <div className="homeWrapper">
       <div className="homeContainer">
