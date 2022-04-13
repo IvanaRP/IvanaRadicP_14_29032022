@@ -1,9 +1,9 @@
-.homeWrapper {
+/* .homeWrapper {
   margin: auto;
   width: 50%;
   border: 3px solid green;
   padding: 10px;
-}
+} */
 
 .homeContainer {
   display: flex;
@@ -31,4 +31,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  width: 250px;
+  margin-top: 10px;
+}
+
+label {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.home-button {
+  margin: 20px;
 }

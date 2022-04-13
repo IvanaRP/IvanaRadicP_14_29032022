@@ -1,48 +1,129 @@
-import "../../styles/home.css";
-import DatePickerForm from "../../Components/DatePicker";
-import DropDown from "../../Components/Dropdown";
+import { useState } from "react";
+import React from "react";
+import "react-responsive-modal/styles.css";
+import { Modal } from "react-responsive-modal";
+import { departments, states } from "../../Datas/data";
+// import Dropdown from "react-dropdown";
+import "react-dropdown/style.css";
+import DatePicker from "react-date-picker";
+import Select from "react-select";
 
-function Form() {
+const initialFieldValues = {
+  id: 0,
+  fullName: "",
+  email: "",
+  mobile: "",
+  city: "",
+  gender: "male",
+  departmentId: "",
+  stateId: "",
+  hireDate: new Date(),
+  isPermanent: false,
+};
+export default function EmployeesForm() {
+  const [open, setOpen] = useState(false);
+
+  const onOpenModal = () => setOpen(true);
+  const onCloseModal = () => setOpen(false);
+
+  const [employees, setEmployees] = useState([]);
+
+  const addEmployee = (newEmployee) => {
+    setEmployees([...employees, newEmployee]);
+  };
+  console.log(addEmployee);
+
+  const [values, setValues] = useState(initialFieldValues);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setValues({
+      ...values,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    window.alert("test");
+  };
+
   return (
-    <form className="home-form">
-      <label for="first-name">First Name</label>
-      <input type="text" id="first-name" />
+    <>
+      <div>EmployeesForm</div>
 
-      <label for="last-name">Last Name</label>
-      <input type="text" id="last-name" />
+      <form onSubmit={handleSubmit}>
+        <label>
+          Full Name:
+          <input
+            type="text"
+            label="Full Name"
+            name="fullName"
+            value={values.fullName}
+            onChange={handleInputChange}
+            autoComplete="off"
+            id="first-name"
+          />
+        </label>
+        <label>
+          Email:
+          <input
+            type="text"
+            label="Email"
+            name="email"
+            value={values.email}
+            onChange={handleInputChange}
+            autoComplete="off"
+            id="email"
+          />
+        </label>
 
-      <label for="date-of-birth">Date of Birth</label>
-      <DatePickerForm />
+        <div className="input">
+          <label className="input-label" type="text" htmlFor="state">
+            Department:
+          </label>
+          <Select
+            name="departmentId"
+            label="Department"
+            placeholder="Select an option"
+            value={values.departmentId}
+            onChange={handleInputChange}
+            options={departments}
+          />
+        </div>
+        <div className="input">
+          <label className="input-label" type="text" htmlFor="state">
+            State:
+          </label>
+          <Select
+            name="stateId"
+            label="State"
+            placeholder="Select an option"
+            value={values.stateId}
+            options={states}
+            onChange={handleInputChange}
+          />
+        </div>
 
-      <label for="start-date">Start Date</label>
-      <DatePickerForm />
+        <div>
+          <DatePicker
+            name="hireDate"
+            label="Date"
+            format="MM/dd/yyyy"
+            onChange={handleInputChange}
+            value={values.hireDate}
+          />
+        </div>
 
-      <fieldset className="home-form-address">
-        <legend>Address</legend>
-
-        <label for="street">Street</label>
-        <input id="street" type="text" />
-
-        <label for="city">City</label>
-        <input id="city" type="text" />
-
-        <label for="state">State</label>
-        <select name="state" id="state"></select>
-        <DropDown />
-        <label for="zip-code">Zip Code</label>
-        <input id="zip-code" type="number" />
-      </fieldset>
-
-      <label for="department">Department</label>
-      <select name="department" id="department">
-        <option>Sales</option>
-        <option>Marketing</option>
-        <option>Engineering</option>
-        <option>Human Resources</option>
-        <option>Legal</option>
-      </select>
-    </form>
+        <div>
+          <button className="home-button" onClick={onOpenModal}>
+            Save
+          </button>
+          <Modal open={open} onClose={onCloseModal} center>
+            <h2>Employee Created!</h2>
+          </Modal>
+        </div>
+      </form>
+    </>
   );
 }
-
-export default Form;

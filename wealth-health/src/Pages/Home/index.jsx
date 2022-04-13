@@ -1,12 +1,22 @@
 import { Link } from "react-router-dom";
-import Form from "../../Components/Form";
+import React, { useState } from "react";
+
+import "react-responsive-modal/styles.css";
+import { Modal } from "react-responsive-modal";
+// import Form from "../../Components/Form";
 import "../../styles/home.css";
+import EmployeesForm from "../../Components/Form";
 
 function Home() {
+  const [open, setOpen] = useState(false);
+
+  const onOpenModal = () => setOpen(true);
+  const onCloseModal = () => setOpen(false);
+
   return (
     <div className="homeWrapper">
       <div className="homeContainer">
-        <div class="title">
+        <div className="title">
           <h1>HRnet</h1>
         </div>
         <div className="home-formContainer">
@@ -14,12 +24,7 @@ function Home() {
             View Current Employees
           </Link>
           <h2>Create Employee</h2>
-          <Form />
-
-          <button onclick="saveEmployee()">Save</button>
-        </div>
-        <div id="confirmation" className="modal">
-          Employee Created!
+          <EmployeesForm />
         </div>
       </div>
     </div>
