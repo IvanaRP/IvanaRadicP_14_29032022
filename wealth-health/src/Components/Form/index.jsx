@@ -25,13 +25,6 @@ export default function EmployeesForm() {
   const onOpenModal = () => setOpen(true);
   const onCloseModal = () => setOpen(false);
 
-  const [employees, setEmployees] = useState([]);
-
-  const addEmployee = (newEmployee) => {
-    setEmployees([...employees, newEmployee]);
-  };
-  console.log(addEmployee);
-
   const [values, setValues] = useState(initialFieldValues);
 
   const handleInputChange = (e) => {
