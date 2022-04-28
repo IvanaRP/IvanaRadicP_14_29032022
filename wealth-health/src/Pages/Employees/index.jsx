@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 import "../../styles/employees.css";
-// // import BasicTable from "../../Components/Table/BasicTable"; //table mocked up data
-// import Table from "../../Components/InputTable/DisplayFromDataInT";
-// import { useState } from "react";
+
 function Employees() {
   return (
     <div className="employeesWrapper">

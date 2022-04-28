@@ -10,6 +10,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 5%;
 }
 
 .home-formContainer {
@@ -43,4 +44,18 @@ label {
 
 .home-button {
   margin: 20px;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-self: start;
+}
+
+input {
+  margin-top: 10px;
+}
+
+.inputAdressSection {
+  margin-top: 10px;
 }

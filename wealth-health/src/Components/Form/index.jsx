@@ -43,11 +43,9 @@ export default function EmployeesForm() {
 
   return (
     <>
-      <div>EmployeesForm</div>
-
       <form onSubmit={handleSubmit} autoComplete="off">
-        <label>
-          Full Name:
+        <label className="inputWrapper">
+          Full Name
           <input
             type="text"
             label="Full Name"
@@ -58,8 +56,8 @@ export default function EmployeesForm() {
             id="first-name"
           />
         </label>
-        <label>
-          Last Name:
+        <label className="inputWrapper">
+          Last Name
           <input
             type="text"
             label="lastName"
@@ -72,7 +70,20 @@ export default function EmployeesForm() {
         </label>
         <div className="input">
           <label className="input-label" type="text" htmlFor="state">
-            Start Date:
+            Date of Birth
+          </label>
+          <DatePicker
+            name="birthDate"
+            label="Date"
+            format="MM/dd/yyyy"
+            onChange={handleInputChange}
+            value={values.birthDate}
+          />
+        </div>
+
+        <div className="input">
+          <label className="input-label" type="text" htmlFor="state">
+            Start Date
           </label>
           <DatePicker
             name="startDate"
@@ -82,6 +93,67 @@ export default function EmployeesForm() {
             value={values.startDate}
           />
         </div>
+
+        <fieldset className="inputAdressSection">
+          <legend>Address</legend>
+          <div className="input">
+            <label className="inputWrapper">
+              Street
+              <input
+                type="text"
+                label="street"
+                name="street"
+                value={values.street}
+                onChange={handleInputChange}
+                autoComplete="off"
+                id="street"
+              />
+            </label>
+          </div>
+          <div className="input">
+            <label className="inputWrapper">
+              City
+              <input
+                type="text"
+                label="city"
+                name="city"
+                value={values.city}
+                onChange={handleInputChange}
+                autoComplete="off"
+                id="city"
+              />
+            </label>
+          </div>
+          <div className="input">
+            <label className="input-label" type="text" htmlFor="state">
+              State
+            </label>
+            <Select
+              name="stateId"
+              label="State"
+              placeholder="Select an option"
+              value={values.stateId}
+              options={states}
+              onChange={handleInputChange}
+            />
+          </div>
+
+          <div className="input">
+            <label className="inputWrapper">
+              Zip Code
+              <input
+                type="text"
+                label="zipCode"
+                name="zipCode"
+                value={values.zipCode}
+                onChange={handleInputChange}
+                autoComplete="off"
+                id="zipCode"
+              />
+            </label>
+          </div>
+        </fieldset>
+
         <div className="input">
           <label className="input-label" type="text" htmlFor="state">
             Department:
@@ -95,74 +167,6 @@ export default function EmployeesForm() {
             options={departments}
           />
         </div>
-        <div className="input">
-          <label className="input-label" type="text" htmlFor="state">
-            Birth Date:
-          </label>
-          <DatePicker
-            name="birthDate"
-            label="Date"
-            format="MM/dd/yyyy"
-            onChange={handleInputChange}
-            value={values.birthDate}
-          />
-        </div>
-        <div className="input">
-          <label>
-            Street:
-            <input
-              type="text"
-              label="street"
-              name="street"
-              value={values.street}
-              onChange={handleInputChange}
-              autoComplete="off"
-              id="street"
-            />
-          </label>
-        </div>
-        <div className="input">
-          <label>
-            City:
-            <input
-              type="text"
-              label="city"
-              name="city"
-              value={values.city}
-              onChange={handleInputChange}
-              autoComplete="off"
-              id="city"
-            />
-          </label>
-        </div>
-        <div className="input">
-          <label className="input-label" type="text" htmlFor="state">
-            State:
-          </label>
-          <Select
-            name="stateId"
-            label="State"
-            placeholder="Select an option"
-            value={values.stateId}
-            options={states}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div className="input">
-          <label>
-            Zip Code:
-            <input
-              type="text"
-              label="zipCode"
-              name="zipCode"
-              value={values.zipCode}
-              onChange={handleInputChange}
-              autoComplete="off"
-              id="zipCode"
-            />
-          </label>
-        </div>
-
         <div>
           <button className="home-button" onClick={onOpenModal}>
             Save

@@ -10,9 +10,9 @@ function Home() {
   return (
     <div className="homeWrapper">
       <div className="homeContainer">
-        <div className="title">
+        {/* <div className="title">
           <h1>HRnet</h1>
-        </div>
+        </div> */}
         <div className="home-formContainer">
           <Link to="/employee-list" className="homeWrapper-link">
             View Current Employees
