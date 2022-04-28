@@ -4,8 +4,9 @@ import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import { departments, states } from "../../Datas/data";
 
-import "react-dropdown/style.css";
-import DatePicker from "react-date-picker";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+
 import Select from "react-select";
 
 const initialFieldValues = {
