@@ -6,7 +6,7 @@ function Employees() {
     <div className="employeesWrapper">
       <div className="employeesContainer">
         <h1>Current Employees</h1>
-        <div>Table</div>
+        <div className="table">Table</div>
 
         <Link to="/" className="employeesWrapper-link">
           Home
