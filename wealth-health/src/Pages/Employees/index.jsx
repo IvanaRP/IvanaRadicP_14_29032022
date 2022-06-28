@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import "../../styles/employees.css";
 
+import EmployeesList from "../../Components/Table";
+
 function Employees() {
   return (
     <div className="employeesWrapper">
@@ -11,6 +13,8 @@ function Employees() {
         <Link to="/" className="employeesWrapper-link">
           Home
         </Link>
+
+        <EmployeesList />
       </div>
     </div>
   );

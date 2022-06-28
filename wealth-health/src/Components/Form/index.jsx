@@ -1,17 +1,23 @@
 import React, { useState } from "react";
+// import Input from "../../Components/Input";
 
 export default function EmployeesForm() {
   const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const AddEmployee = (e) => {
     e.preventDefault();
     const employeeData = JSON.parse(localStorage.getItem("employees")) || [];
     const employee = {
       firstName,
+      lastName,
     };
 
     //Saving to localStorage employees
     employeeData.push(employee);
     localStorage.setItem("employees", JSON.stringify(employeeData));
+    console.log("newEmployee");
+    alert(JSON.stringify(employee));
+    e.target.reset();
   };
 
   return (
@@ -24,15 +30,19 @@ export default function EmployeesForm() {
           type="text"
           className="form-control"
           placeholder="First name"
-          aria-label="First name"
           onChange={(e) => setFirstName(e.target.value)}
           required="required"
         />
-
-        <label className="inputWrapper">
+        <label htmlFor="lastName" className="form-label">
           Last Name
-          <input type="text" label="lastName" name="lastName" />
         </label>
+        <input
+          type="text"
+          className="form-control"
+          placeholder="Last name"
+          onChange={(e) => setLastName(e.target.value)}
+          required="required"
+        />
 
         <fieldset className="inputAdressSection">
           <legend>Address</legend>
