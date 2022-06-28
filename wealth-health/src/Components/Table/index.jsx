@@ -15,7 +15,7 @@ const columns = [
   },
   {
     name: "Start Date",
-    selector: "dateStart",
+    selector: "startDate",
     sortable: true,
   },
   {

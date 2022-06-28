@@ -5,6 +5,7 @@ export default function EmployeesForm() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [dateBirth, setDateBirth] = useState("");
+  const [startDate, setStartDate] = useState("");
   const AddEmployee = (e) => {
     e.preventDefault();
     const employeeData = JSON.parse(localStorage.getItem("employees")) || [];
@@ -12,6 +13,7 @@ export default function EmployeesForm() {
       firstName,
       lastName,
       dateBirth,
+      startDate,
     };
 
     //Saving to localStorage employees
@@ -52,9 +54,18 @@ export default function EmployeesForm() {
         <input
           type="date"
           className="form-control"
-          placeholder="First name"
-          aria-label="First name"
+          placeholder="DD/MM/YY"
           onChange={(e) => setDateBirth(e.target.value)}
+          required="required"
+        />
+        <label htmlFor="birth" className="form-label">
+          Start Date
+        </label>
+        <input
+          type="date"
+          className="form-control"
+          placeholder="DD/MM/YY"
+          onChange={(e) => setStartDate(e.target.value)}
           required="required"
         />
         <fieldset className="inputAdressSection">
