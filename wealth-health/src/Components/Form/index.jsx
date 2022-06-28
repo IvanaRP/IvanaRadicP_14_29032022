@@ -4,12 +4,14 @@ import React, { useState } from "react";
 export default function EmployeesForm() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  const [dateBirth, setDateBirth] = useState("");
   const AddEmployee = (e) => {
     e.preventDefault();
     const employeeData = JSON.parse(localStorage.getItem("employees")) || [];
     const employee = {
       firstName,
       lastName,
+      dateBirth,
     };
 
     //Saving to localStorage employees
@@ -44,6 +46,17 @@ export default function EmployeesForm() {
           required="required"
         />
 
+        <label htmlFor="birth" className="form-label">
+          Date of birth
+        </label>
+        <input
+          type="date"
+          className="form-control"
+          placeholder="First name"
+          aria-label="First name"
+          onChange={(e) => setDateBirth(e.target.value)}
+          required="required"
+        />
         <fieldset className="inputAdressSection">
           <legend>Address</legend>
         </fieldset>
