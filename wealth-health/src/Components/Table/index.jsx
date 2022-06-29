@@ -29,13 +29,13 @@ const columns = [
   {
     name: "Date of Birth",
     // selector: "dateBirth",
-    selector: (row) => row.dateBirt,
+    selector: (row) => row.dateBirth,
     sortable: true,
   },
   {
     name: "Street",
     // selector: "address",
-    selector: (row) => row.address,
+    selector: (row) => row.street,
     sortable: true,
   },
   {

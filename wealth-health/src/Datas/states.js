@@ -1,238 +1,63 @@
-export const states = [
-  {
-    label: "Alabama",
-    value: "AL",
-  },
-  {
-    label: "Alaska",
-    value: "AK",
-  },
-  {
-    label: "American Samoa",
-    value: "AS",
-  },
-  {
-    label: "Arizona",
-    value: "AZ",
-  },
-  {
-    label: "Arkansas",
-    value: "AR",
-  },
-  {
-    label: "California",
-    value: "CA",
-  },
-  {
-    label: "Colorado",
-    value: "CO",
-  },
-  {
-    label: "Connecticut",
-    value: "CT",
-  },
-  {
-    label: "Delaware",
-    value: "DE",
-  },
-  {
-    label: "District Of Columbia",
-    value: "DC",
-  },
-  {
-    label: "Federated States Of Micronesia",
-    value: "FM",
-  },
-  {
-    label: "Florida",
-    value: "FL",
-  },
-  {
-    label: "Georgia",
-    value: "GA",
-  },
-  {
-    label: "Guam",
-    value: "GU",
-  },
-  {
-    label: "Hawaii",
-    value: "HI",
-  },
-  {
-    label: "Idaho",
-    value: "ID",
-  },
-  {
-    label: "Illinois",
-    value: "IL",
-  },
-  {
-    label: "Indiana",
-    value: "IN",
-  },
-  {
-    label: "Iowa",
-    value: "IA",
-  },
-  {
-    label: "Kansas",
-    value: "KS",
-  },
-  {
-    label: "Kentucky",
-    value: "KY",
-  },
-  {
-    label: "Louisiana",
-    value: "LA",
-  },
-  {
-    label: "Maine",
-    value: "ME",
-  },
-  {
-    label: "Marshall Islands",
-    value: "MH",
-  },
-  {
-    label: "Maryland",
-    value: "MD",
-  },
-  {
-    label: "Massachusetts",
-    value: "MA",
-  },
-  {
-    label: "Michigan",
-    value: "MI",
-  },
-  {
-    label: "Minnesota",
-    value: "MN",
-  },
-  {
-    label: "Mississippi",
-    value: "MS",
-  },
-  {
-    label: "Missouri",
-    value: "MO",
-  },
-  {
-    label: "Montana",
-    value: "MT",
-  },
-  {
-    label: "Nebraska",
-    value: "NE",
-  },
-  {
-    label: "Nevada",
-    value: "NV",
-  },
-  {
-    label: "New Hampshire",
-    value: "NH",
-  },
-  {
-    label: "New Jersey",
-    value: "NJ",
-  },
-  {
-    label: "New Mexico",
-    value: "NM",
-  },
-  {
-    label: "New York",
-    value: "NY",
-  },
-  {
-    label: "North Carolina",
-    value: "NC",
-  },
-  {
-    label: "North Dakota",
-    value: "ND",
-  },
-  {
-    label: "Northern Mariana Islands",
-    value: "MP",
-  },
-  {
-    label: "Ohio",
-    value: "OH",
-  },
-  {
-    label: "Oklahoma",
-    value: "OK",
-  },
-  {
-    label: "Oregon",
-    value: "OR",
-  },
-  {
-    label: "Palau",
-    value: "PW",
-  },
-  {
-    label: "Pennsylvania",
-    value: "PA",
-  },
-  {
-    label: "Puerto Rico",
-    value: "PR",
-  },
-  {
-    label: "Rhode Island",
-    value: "RI",
-  },
-  {
-    label: "South Carolina",
-    value: "SC",
-  },
-  {
-    label: "South Dakota",
-    value: "SD",
-  },
-  {
-    label: "Tennessee",
-    value: "TN",
-  },
-  {
-    label: "Texas",
-    value: "TX",
-  },
-  {
-    label: "Utah",
-    value: "UT",
-  },
-  {
-    label: "Vermont",
-    value: "VT",
-  },
-  {
-    label: "Virgin Islands",
-    value: "VI",
-  },
-  {
-    label: "Virginia",
-    value: "VA",
-  },
-  {
-    label: "Washington",
-    value: "WA",
-  },
-  {
-    label: "West Virginia",
-    value: "WV",
-  },
-  {
-    label: "Wisconsin",
-    value: "WI",
-  },
-  {
-    label: "Wyoming",
-    value: "WY",
-  },
+const states = [
+  { id: 0, label: " ", name: "Select a state " },
+  { id: 1, label: "AL", name: "Alabama" },
+  { id: 2, label: "AK", name: "Alaska" },
+  { id: 3, label: "AS", name: "American Samoa" },
+  { id: 4, label: "AZ", name: "Arizona" },
+  { id: 5, label: "AR", name: "Arkansas" },
+  { id: 6, label: "CA", name: "California" },
+  { id: 7, label: "CO", name: "Colorado" },
+  { id: 8, label: "CT", name: "Connecticut" },
+  { id: 9, label: "DE", name: "Delaware" },
+  { id: 10, label: "DC", name: "District Of Columbia" },
+  { id: 11, label: "FM", name: "Federated States Of Micronesia" },
+  { id: 12, label: "FL", name: "Florida" },
+  { id: 13, label: "GA", name: "Georgia" },
+  { id: 14, label: "GU", name: "Guam" },
+  { id: 15, label: "HI", name: "Hawaii" },
+  { id: 16, label: "ID", name: "Idaho" },
+  { id: 17, label: "IL", name: "Illinois" },
+  { id: 18, label: "IN", name: "Indiana" },
+  { id: 19, label: "IA", name: "Iowa" },
+  { id: 20, label: "KS", name: "Kansas" },
+  { id: 21, label: "KY", name: "Kentucky" },
+  { id: 22, label: "LA", name: "Louisiana" },
+  { id: 23, label: "ME", name: "Maine" },
+  { id: 24, label: "MH", name: "Marshall Islands" },
+  { id: 25, label: "MD", name: "Maryland" },
+  { id: 26, label: "MA", name: "Massachusetts" },
+  { id: 27, label: "MI", name: "Michigan" },
+  { id: 28, label: "MN", name: "Minnesota" },
+  { id: 29, label: "MS", name: "Mississippi" },
+  { id: 30, label: "MO", name: "Missouri" },
+  { id: 31, label: "MT", name: "Montana" },
+  { id: 32, label: "NE", name: "Nebraska" },
+  { id: 33, label: "NV", name: "Nevada" },
+  { id: 34, label: "NH", name: "New Hampshire" },
+  { id: 35, label: "NJ", name: "New Jersey" },
+  { id: 36, label: "NM", name: "New Mexico" },
+  { id: 37, label: "NY", name: "New York" },
+  { id: 38, label: "NC", name: "North Carolina" },
+  { id: 39, label: "ND", name: "North Dakota" },
+  { id: 40, label: "MP", name: "Northern Mariana Islands" },
+  { id: 41, label: "OH", name: "Ohio" },
+  { id: 42, label: "OK", name: "Oklahoma" },
+  { id: 43, label: "OR", name: "Oregon" },
+  { id: 44, label: "PW", name: "Palau" },
+  { id: 45, label: "PA", name: "Pennsylvania" },
+  { id: 46, label: "PR", name: "Puerto Rico" },
+  { id: 47, label: "RI", name: "Rhode Island" },
+  { id: 48, label: "SC", name: "South Carolina" },
+  { id: 49, label: "SD", name: "South Dakota" },
+  { id: 50, label: "TN", name: "Tennessee" },
+  { id: 51, label: "TX", name: "Texas" },
+  { id: 52, label: "UT", name: "Utah" },
+  { id: 53, label: "VT", name: "Vermont" },
+  { id: 54, label: "VI", name: "Virgin Islands" },
+  { id: 55, label: "VA", name: "Virginia" },
+  { id: 56, label: "WA", name: "Washington" },
+  { id: 57, label: "WV", name: "West Virginia" },
+  { id: 58, label: "WI", name: "Wisconsin" },
+  { id: 59, label: "WY", name: "Wyoming" },
 ];
+export default states;
