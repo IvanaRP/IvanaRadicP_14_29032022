@@ -5,9 +5,9 @@ export default function Dropdown({ name, setDrop, datas, labelTitle }) {
     <label className="label" htmlFor={name}>
       <p>{labelTitle}</p>
       <select name={name} required onChange={(e) => setDrop(e.target.value)}>
-        {datas.map((elt) => (
-          <option key={elt.id} value={elt.label}>
-            {elt.name}
+        {datas.map((data) => (
+          <option key={data.id} value={data.label}>
+            {data.name}
           </option>
         ))}
       </select>
