@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+
 import Dropdown from "../../Components/Dropdown";
 import Input from "../../Components/Input";
+import Date from "../../Components/DatePicker";
 
 import departments from "../../Datas/departments";
 import states from "../../Datas/states";
@@ -56,27 +58,21 @@ export default function EmployeesForm() {
           placeholder="Last name"
           setInput={setLastName}
         />
+        <Date
+          type="date"
+          name="dateBirth"
+          labelTitle="Date of birth"
+          placeholder="DD/MM/YY"
+          setDate={setDateBirth}
+        />
+        <Date
+          type="date"
+          name="dateStart"
+          labelTitle="Start Date"
+          placeholder="DD/MM/YY"
+          setDate={setStartDate}
+        />
 
-        <label htmlFor="birth" className="form-label">
-          Date of birth
-        </label>
-        <input
-          type="date"
-          className="form-control"
-          placeholder="DD/MM/YY"
-          onChange={(e) => setDateBirth(e.target.value)}
-          required="required"
-        />
-        <label htmlFor="birth" className="form-label">
-          Start Date
-        </label>
-        <input
-          type="date"
-          className="form-control"
-          placeholder="DD/MM/YY"
-          onChange={(e) => setStartDate(e.target.value)}
-          required="required"
-        />
         <fieldset className="inputAdressSection">
           <legend>Address</legend>
           <Input
