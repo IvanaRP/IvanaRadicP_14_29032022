@@ -1,25 +1,33 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export default function Input({
-  name,
   type,
-  className,
-  placeholder,
+  name,
   labelTitle,
+  setInput,
+  placeholder,
 }) {
   return (
-    <>
-      <label htmlFor={name} className="form-label">
-        <p>{labelTitle}</p>
-      </label>
+    <label className="label" htmlFor={name}>
+      <p>{labelTitle}</p>
       <input
-        type={type}
         name={name}
-        className={className}
+        type={type}
         placeholder={placeholder}
-        //   onChange={(e) => setFirstName(e.target.value)}
         required
+        onChange={(e) => {
+          setInput(e.target.value);
+        }}
       />
-    </>
+    </label>
   );
 }
+
+Input.propTypes = {
+  type: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  labelTitle: PropTypes.string,
+  setInput: PropTypes.func,
+  placeholder: PropTypes.string.isRequired,
+};

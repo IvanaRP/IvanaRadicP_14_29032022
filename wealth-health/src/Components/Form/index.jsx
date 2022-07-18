@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Dropdown from "../../Components/Dropdown";
+import Input from "../../Components/Input";
 
 import departments from "../../Datas/departments";
 import states from "../../Datas/states";
@@ -41,25 +42,19 @@ export default function EmployeesForm() {
   return (
     <>
       <form onSubmit={AddEmployee} autoComplete="off">
-        <label htmlFor="firstName" className="form-label">
-          First name
-        </label>
-        <input
+        <Input
           type="text"
-          className="form-control"
+          name="firstName"
+          labelTitle="First Name"
           placeholder="First name"
-          onChange={(e) => setFirstName(e.target.value)}
-          required="required"
+          setInput={setFirstName}
         />
-        <label htmlFor="lastName" className="form-label">
-          Last Name
-        </label>
-        <input
+        <Input
           type="text"
-          className="form-control"
+          name="lastName"
+          labelTitle="Last name"
           placeholder="Last name"
-          onChange={(e) => setLastName(e.target.value)}
-          required="required"
+          setInput={setLastName}
         />
 
         <label htmlFor="birth" className="form-label">
@@ -84,41 +79,33 @@ export default function EmployeesForm() {
         />
         <fieldset className="inputAdressSection">
           <legend>Address</legend>
-          <label htmlFor="inputAddress" className="form-label">
-            Street
-          </label>
-          <input
+          <Input
             type="text"
-            className="form-control"
-            id="inputAddress"
-            onChange={(e) => setStreet(e.target.value)}
-            required="required"
+            name="inputAddress"
+            labelTitle="Street"
+            placeholder="Street"
+            setInput={setStreet}
           />
-          <label htmlFor="inputCity" className="form-label">
-            City
-          </label>
-          <input
+          <Input
             type="text"
-            className="form-control"
-            id="inputCity"
-            onChange={(e) => setCity(e.target.value)}
-            required="required"
+            name="inputCitys"
+            labelTitle="City"
+            placeholder="City"
+            setInput={setCity}
           />
+
           <Dropdown
             name="state"
             labelTitle="State"
             setDrop={setState}
             datas={states}
           />
-          <label htmlFor="inputZip" className="form-label">
-            Zip
-          </label>
-          <input
+          <Input
             type="number"
-            className="form-control"
-            id="inputZip"
-            onChange={(e) => setZip(e.target.value)}
-            required="required"
+            name="inputZip"
+            labelTitle="Zip"
+            placeholder="Zip"
+            setInput={setZip}
           />
         </fieldset>
         <Dropdown
