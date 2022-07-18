@@ -8,13 +8,11 @@ function Employees() {
     <div className="employeesWrapper">
       <div className="employeesContainer">
         <h1>Current Employees</h1>
-        <div className="table">Table</div>
 
+        <EmployeesList />
         <Link to="/" className="employeesWrapper-link">
           Home
         </Link>
-
-        <EmployeesList />
       </div>
     </div>
   );

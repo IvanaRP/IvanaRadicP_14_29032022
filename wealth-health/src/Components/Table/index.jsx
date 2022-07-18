@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import DataTable from "react-data-table-component";
-
+import "../../styles/table.css";
 // Manage columns for data table
 const columns = [
   {
@@ -84,8 +84,8 @@ const EmployeesList = () => {
 
   return (
     <>
-      <form>
-        <div>
+      <form className="table-search">
+        <div className="table-searchBar">
           <input
             className="p-1"
             type="text"
@@ -95,7 +95,7 @@ const EmployeesList = () => {
         </div>
       </form>
 
-      <div className="App">
+      <div className="tableData">
         <DataTable
           pagination
           columns={columns}

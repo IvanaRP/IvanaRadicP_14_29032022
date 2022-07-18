@@ -1,20 +1,24 @@
-table {
+.tableData {
+  /* color: #000; */
+  width: 1200px;
+}
+.table-search {
+  display: flex;
+  width: 1200px;
+  /* align-items: center; */
+  justify-content: flex-end;
+}
+.table-searchBar {
+  display: flex;
+  justify-content: flex-end;
+}
+.eUeqdG {
+  display: flex;
+  overflow: visible;
   white-space: nowrap;
-  width: 80%;
+  text-overflow: unset;
 }
 
-.employee-table {
-  display: flex;
-  width: fit-content;
-}
-tr {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-th {
-  padding: 10px;
-}
-td {
-  padding: 10px;
-}
+/* .bnAwAJ {
+  max-width: 100%;
+} */
