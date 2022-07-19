@@ -4,8 +4,12 @@ import Dropdown from "../../Components/Dropdown";
 import Input from "../../Components/Input";
 import Date from "../../Components/DatePicker";
 
+import Modal from "../Modal";
+
 import departments from "../../Datas/departments";
 import states from "../../Datas/states";
+
+// import "../../styles/modal.css";
 
 export default function EmployeesForm() {
   const [firstName, setFirstName] = useState("");
@@ -17,6 +21,7 @@ export default function EmployeesForm() {
   const [state, setState] = useState("");
   const [zip, setZip] = useState("");
   const [department, setDepartment] = useState("");
+  const [isDisplayed, setDisplayed] = useState(false);
 
   const AddEmployee = (e) => {
     e.preventDefault();
@@ -37,7 +42,9 @@ export default function EmployeesForm() {
     employeeData.push(employee);
     localStorage.setItem("employees", JSON.stringify(employeeData));
     console.log("newEmployee");
-    alert(JSON.stringify(employee));
+    // alert(JSON.stringify(employee));
+    //Display modal validation
+    setDisplayed(true);
     e.target.reset();
   };
 
@@ -113,7 +120,12 @@ export default function EmployeesForm() {
         />
 
         <div>
-          <button className="home-button">Save</button>
+          <button className="home-buttonSave">Save</button>
+          {isDisplayed ? (
+            <Modal text="Employee Created!" setShow={setDisplayed} />
+          ) : (
+            ""
+          )}
         </div>
       </form>
     </>
