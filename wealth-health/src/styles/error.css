@@ -1,7 +1,8 @@
 .errorWrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
+  align-items: center;
 }
 
 .errorContainer {
@@ -12,8 +13,7 @@
 }
 
 .errorUser {
-  font-family: Roboto;
-  color: #e60000;
+  color: #ff0000;
   text-decoration: none;
   text-align: center;
   font-weight: 900;
@@ -28,6 +28,6 @@
 
 .home-link {
   text-decoration: none;
-  color: #e60000;
-  border-bottom: #e60000;
+  color: #ff0000;
+  border-bottom: #ff0000;
 }
