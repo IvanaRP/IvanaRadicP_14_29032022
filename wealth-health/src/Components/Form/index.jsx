@@ -9,7 +9,7 @@ import Modal from "../Modal";
 import departments from "../../Datas/departments";
 import states from "../../Datas/states";
 
-// import "../../styles/modal.css";
+import "../../styles/form.css";
 
 export default function EmployeesForm() {
   const [firstName, setFirstName] = useState("");
@@ -51,34 +51,36 @@ export default function EmployeesForm() {
   return (
     <>
       <form onSubmit={AddEmployee} autoComplete="off">
-        <Input
-          type="text"
-          name="firstName"
-          labelTitle="First Name"
-          placeholder="First name"
-          setInput={setFirstName}
-        />
-        <Input
-          type="text"
-          name="lastName"
-          labelTitle="Last name"
-          placeholder="Last name"
-          setInput={setLastName}
-        />
-        <Date
-          type="date"
-          name="dateBirth"
-          labelTitle="Date of birth"
-          placeholder="DD/MM/YY"
-          setDate={setDateBirth}
-        />
-        <Date
-          type="date"
-          name="dateStart"
-          labelTitle="Start Date"
-          placeholder="DD/MM/YY"
-          setDate={setStartDate}
-        />
+        <div className="inputNameSection">
+          <Input
+            type="text"
+            name="firstName"
+            labelTitle="First Name"
+            placeholder="First name"
+            setInput={setFirstName}
+          />
+          <Input
+            type="text"
+            name="lastName"
+            labelTitle="Last name"
+            placeholder="Last name"
+            setInput={setLastName}
+          />
+          <Date
+            type="date"
+            name="dateBirth"
+            labelTitle="Date of birth"
+            placeholder="DD/MM/YY"
+            setDate={setDateBirth}
+          />
+          <Date
+            type="date"
+            name="dateStart"
+            labelTitle="Start Date"
+            placeholder="DD/MM/YY"
+            setDate={setStartDate}
+          />
+        </div>
 
         <fieldset className="inputAdressSection">
           <legend>Address</legend>
@@ -98,6 +100,7 @@ export default function EmployeesForm() {
           />
 
           <Dropdown
+            className="dropDown"
             name="state"
             labelTitle="State"
             setDrop={setState}
@@ -111,6 +114,7 @@ export default function EmployeesForm() {
             setInput={setZip}
           />
         </fieldset>
+
         <Dropdown
           name="department"
           labelTitle="Department"
@@ -120,7 +124,7 @@ export default function EmployeesForm() {
         />
 
         <div>
-          <button className="home-buttonSave">Save</button>
+          <button className="form-buttonSave">Save</button>
           {isDisplayed ? (
             <Modal text="Employee Created!" setShow={setDisplayed} />
           ) : (
