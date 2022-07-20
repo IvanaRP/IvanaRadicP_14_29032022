@@ -4,7 +4,8 @@ import Dropdown from "../../Components/Dropdown";
 import Input from "../../Components/Input";
 import Date from "../../Components/DatePicker";
 
-import Modal from "../Modal";
+import { Requirements } from "iv-p14-modal";
+// import Modal from "../Modal";
 
 import departments from "../../Datas/departments";
 import states from "../../Datas/states";
@@ -126,7 +127,7 @@ export default function EmployeesForm() {
         <div>
           <button className="form-buttonSave">Save</button>
           {isDisplayed ? (
-            <Modal text="Employee Created!" setShow={setDisplayed} />
+            <Requirements text="Employee Created!" setShow={setDisplayed} />
           ) : (
             ""
           )}
