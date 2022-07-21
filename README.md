@@ -1,45 +1,41 @@
 # Project 14 - Openclassrooms
 This repo contains all the source code for Wealth-health
 
-# Projet 14 : Faites passer une librairie jQuery vers React
+# Projet 14 : Pass a jQuery library to React
 
 ### Scénario :
 
-WealthHealth est une société qui utilise une application web interne, appelée HRnet, qui gère les dossiers des employés. L'application est ancienne et utilise jQuery côté front end, ce qui entraîne des bugs considérables et une augmentation des plaintes en interne.
+WealthHealt is a company that uses an internal web application, called HRnet, which manages employee records. The app is old and uses jQuery on the front end, which leads to massive bugs and increased internal complaints. 
 
 ### Mission :
 
-- Convertir l'ensemble du projet HRNet en React.
-- Convertir l'un des quatre plugins jQuery actuels en React. Remplacer les 3 plugins jQuery restants par des composants React.
-- Effectuer des tests de performance Lighthouse en comparant l'ancienne et la nouvelle application.
+- Convert the entire HRNet project to React. 
+- Convert one of the four current jQuery plugins to React. Replace the remaining 3 jQuery plugins with React components. 
+- Perform Lighthouse benchmarks comparing the old and new app. 
 
 #### Conversion du projet HRNet
 
-- Faire une nouvelle version des pages "Create Employee" et "Employee List" avec React.
-- Ajouter un système de gestion d'état (la version actuelle utilise un stockage local).
-- S'assurer que tout est cohérent au niveau du style. Pas d'obligation de refaire le design de l'application, mais possibilité de changer le style pour quelque chose de plus moderne.
-- Tester le code React avec une suite de tests unitaires. Sinon, seuls des tests manuels sont nécessaires.
+- Make a new version of the "Create Employee" and "Employee List" pages with React.
+- Add a state management system (the current version uses local storage).
+- Make sure that everything is consistent in terms of style.
+- Test the React code with a unit test suite. Otherwise, only manual testing is necessary.
 
-#### Conversion des plugins
+#### Plugin conversion
 
-Voici la liste des plugins jQuery actuellement utilisés qui doivent être convertis :
+Here is the list of currently used jQuery plugins that need to be converted: 
 
-- Plugin de sélection de date
-- Plugin de fenêtre modale - jQuery.modal.js
-- Menus déroulants
-- Plugin pour les tables de données
+- Date picker plugin
+- Modal window plugin - jQuery.modal.js
+- Drop-down menus
+- Plugin for data tables
 
-Lors de la conversion d'un plugin jQuery en un composant React, il faut garder à l'esprit de ne convertir que le code qui traite de la fonctionnalité réelle de l'interface utilisateur du plugin. Par exemple, si un plugin jQuery inclut du code AJAX, pas besoin de le convertir.
+#### Performance testing
 
-#### Tests de performance
-
-Mesurer des données quantifiables (ex. : temps de chargement des pages, appels réseau) pour s'assurer que la conversion de l'application à React améliore effectivement les performances. Pour cela, faire des audits de performance Lighthouse. Pour comparer, faire un audit pour l'application jQuery HRnet actuelle, puis un autre une fois que l'application et le plugin jQuery choisi seront convertis en React.
-
-C'est tout ! Une fois que l'application HRnet en React fonctionne, publier le composant React sur npm sous forme de package et partager le lien. Possibilité d'utiliser les paquets GitHub comme alternative.
+- Measure quantifiable data (e.g. page load times, network calls) to ensure that converting the app to React actually improves performance. For that, do well Lighthouse performance audits.
 
 ## Installation :
 
-### Prérequis
+### Prerequisites
 
 - [NodeJS](https://nodejs.org/en/) Version 14.16.0
 - [npm](https://www.npmjs.com/) Version 6.14.11
@@ -51,16 +47,15 @@ C'est tout ! Une fois que l'application HRnet en React fonctionne, publier le co
 - [React-router-dom](https://v5.reactrouter.com/web/guides/quick-start)
 - [React-Proptypes](https://www.npmjs.com/package/prop-types)
 
-### Installation et exécution du projet
+### Installation and execution of the project
 
-#### Frontend App
+#### Run the React project
 
-- Clonez ce référentiel sur votre ordinateur :
-  git clone https://github.com/IvanaRP/IvanaRadicP_14_29032022
-
-- Dans ce dépôt, installez les paquets/dépendances : npm
-
-- Exécutez l'application frontale : npm start
+- Fork this repository https://github.com/IvanaRP/IvanaRadicP_14_29032022
+- Clone it on your computer.
+- Open the folder in VsCode
+- Execute the following npm command : npm start
+- After doing these steps, normally the React app is launched on your default browser at this address : http://localhost:3000
 
 ### NPM component made for this project
 
