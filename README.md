@@ -39,7 +39,7 @@ Here is the list of currently used jQuery plugins that need to be converted:
 
 - [NodeJS](https://nodejs.org/en/) Version 14.16.0
 - [npm](https://www.npmjs.com/) Version 6.14.11
-- [Visual Studio Code](https://code.visualstudio.com/) ou un autre IDE de votre choix
+- [Visual Studio Code](https://code.visualstudio.com/) 
 
 ### Dependencies
 
