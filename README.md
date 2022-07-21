@@ -1,10 +1,7 @@
 # Project 14 - Openclassrooms
 This repo contains all the source code for Wealth-health
 
-# Technologies
-
-* CSS
-* React
+# Projet 14 : Faites passer une librairie jQuery vers React
 
 ### Scénario :
 
@@ -50,10 +47,10 @@ C'est tout ! Une fois que l'application HRnet en React fonctionne, publier le co
 
 ### Dependencies
 
-- [React](https://reactjs.org/) Version 17.0.2
-- [React-router-dom](https://v5.reactrouter.com/web/guides/quick-start) Version 6.2.1
-- [Styled-components](https://styled-components.com/) Version 5.3.3
-- ...
+- [React](https://reactjs.org/) 
+- [React-router-dom](https://v5.reactrouter.com/web/guides/quick-start)
+- [React-Proptypes](https://www.npmjs.com/package/prop-types)
+
 ### Installation et exécution du projet
 
 #### Frontend App
@@ -65,7 +62,7 @@ C'est tout ! Une fois que l'application HRnet en React fonctionne, publier le co
 
 - Exécutez l'application frontale : npm start
 
-### npm component made for this project
+### NPM component made for this project
 
 - [My component repository ](https://github.com/IvanaRP/P14_Modal)
 
