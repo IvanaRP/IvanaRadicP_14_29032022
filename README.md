@@ -64,3 +64,17 @@ C'est tout ! Une fois que l'application HRnet en React fonctionne, publier le co
 - Dans ce dépôt, installez les paquets/dépendances : npm
 
 - Exécutez l'application frontale : npm start
+
+### npm component made for this project
+
+- [My component repository ](https://github.com/IvanaRP/P14_Modal)
+
+- [My component on npm](https://www.npmjs.com/package/iv-p14-modal)
+
+
+# Author
+
+* IvanaRP
+
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+
