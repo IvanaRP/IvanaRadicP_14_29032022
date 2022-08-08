@@ -24,6 +24,8 @@ export default function EmployeesForm() {
   const [department, setDepartment] = useState("");
   const [isDisplayed, setDisplayed] = useState(false);
 
+  // console.log(JSON.stringify(firstName));
+
   const AddEmployee = (e) => {
     e.preventDefault();
     const employeeData = JSON.parse(localStorage.getItem("employees")) || [];
