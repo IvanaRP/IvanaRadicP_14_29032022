@@ -24,8 +24,6 @@ export default function EmployeesForm() {
   const [department, setDepartment] = useState("");
   const [isDisplayed, setDisplayed] = useState(false);
 
-  // console.log(JSON.stringify(firstName));
-
   const AddEmployee = (e) => {
     e.preventDefault();
     const employeeData = JSON.parse(localStorage.getItem("employees")) || [];
@@ -45,7 +43,7 @@ export default function EmployeesForm() {
     employeeData.push(employee);
     localStorage.setItem("employees", JSON.stringify(employeeData));
     console.log("newEmployee");
-    // alert(JSON.stringify(employee));
+
     //Display modal validation
     setDisplayed(true);
     e.target.reset();
@@ -75,6 +73,7 @@ export default function EmployeesForm() {
             labelTitle="Date of birth"
             placeholder="DD/MM/YY"
             setDate={setDateBirth}
+            max={"2022-08-10"}
           />
           <Date
             type="date"
@@ -123,7 +122,6 @@ export default function EmployeesForm() {
           labelTitle="Department"
           setDrop={setDepartment}
           datas={departments}
-          errorMessage={"Please select department"}
         />
 
         <div>
