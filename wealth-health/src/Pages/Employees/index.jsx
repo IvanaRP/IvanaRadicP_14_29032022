@@ -10,7 +10,7 @@ function Employees() {
         <h1>Current Employees</h1>
 
         <EmployeesList />
-        <Link to="/" className="employeesWrapper-link">
+        <Link to="/IvanaRadicP_14_29032022" className="employeesWrapper-link">
           Home
         </Link>
       </div>
