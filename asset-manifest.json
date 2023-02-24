@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/wealth-health/static/css/main.3b965bc3.css",
-    "main.js": "/wealth-health/static/js/main.7e4df963.js",
-    "index.html": "/wealth-health/index.html",
-    "main.3b965bc3.css.map": "/wealth-health/static/css/main.3b965bc3.css.map",
-    "main.7e4df963.js.map": "/wealth-health/static/js/main.7e4df963.js.map"
+    "main.css": "/IvanaRadicP_14_29032022/static/css/main.3b965bc3.css",
+    "main.js": "/IvanaRadicP_14_29032022/static/js/main.7c0a2afb.js",
+    "index.html": "/IvanaRadicP_14_29032022/index.html",
+    "main.3b965bc3.css.map": "/IvanaRadicP_14_29032022/static/css/main.3b965bc3.css.map",
+    "main.7c0a2afb.js.map": "/IvanaRadicP_14_29032022/static/js/main.7c0a2afb.js.map"
   },
   "entrypoints": [
     "static/css/main.3b965bc3.css",
-    "static/js/main.7e4df963.js"
+    "static/js/main.7c0a2afb.js"
   ]
 }
