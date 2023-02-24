@@ -1,4 +1,5 @@
 {
+  "homepage": "https://ivanarp.github.io/IvanaRadicP_14_29032022",
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
@@ -15,5 +16,13 @@
   },
   "devDependencies": {
     "gh-pages": "^5.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   }
 }
